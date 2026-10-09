@@ -70,6 +70,18 @@
 <p>Enables the RaceRoom bridge. MAIRA reads the game's built-in shared memory directly. RaceRoom updates its data at a full 400 Hz - the highest rate of any bridged game. If MAIRA does not connect, make sure the shared memory option is enabled in RaceRoom's settings.</p>
 <!-- /wp:paragraph -->
 
+<!-- wp:paragraph {"className":"setting"} -->
+<p class="setting">Automobilista 2</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Enables the Automobilista 2 bridge. MAIRA reads the game's built-in shared memory directly - no plugins or game file changes. In the game, open Options &gt; System and set Shared Memory to Project CARS 2, or the bridge will see the process running and still have nothing to read. Car and track names come from the game, so per-car and per-track settings work as they do for the other bridges.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Automobilista 2 does not publish a steering-torque value (the shared memory has suspension velocity, wheel angle, ABS and the rest of the car state, but not the force on the steering shaft). The torque input of your FFB graph stays at zero while this bridge is active, so modules that reshape the game's own force feedback have nothing to reshape. Effect modules that build a force from the wheel angle, speed, lateral acceleration, ABS or suspension still run. The map updates with the graphics frame, up to about 200 Hz, which is the rate the suspension samples come from. Match the game's steering rotation to the wheelbase rotation on the Accessibility page - the map does not say how many degrees its full-lock steering value spans, and MAIRA uses your wheelbase range for that.</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:paragraph {"className":"section"} -->
 <p class="section" id="vjoy">vJoy</p>
 <!-- /wp:paragraph -->
@@ -123,7 +135,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Force feedback quality depends on the rate each game publishes its steering torque at: RaceRoom updates at 400 Hz, the Assetto Corsa family at about 330 Hz, Le Mans Ultimate at 100 Hz, and rFactor 2 at whatever rate its plugin runs at (iRacing's native signal is 360 Hz). MAIRA samples every bridged game at the full 360 Hz, on the same high-resolution timer it uses for iRacing, and feeds those samples into your FFB graph exactly as if they had come from iRacing — so every module you have set up keeps working, and lower rate games still feel smooth.</p>
+<p>Force feedback quality depends on the rate each game publishes its steering torque at: RaceRoom updates at 400 Hz, the Assetto Corsa family at about 330 Hz, Le Mans Ultimate at 100 Hz, and rFactor 2 at whatever rate its plugin runs at (iRacing's native signal is 360 Hz). MAIRA samples every bridged game at the full 360 Hz, on the same high-resolution timer it uses for iRacing, and feeds those samples into your FFB graph exactly as if they had come from iRacing — so every module you have set up keeps working, and lower rate games still feel smooth. Automobilista 2 is the exception: its shared memory has no steering torque, so that input stays at zero and only the synthesized effects have a signal.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -145,7 +157,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>What a bridge provides is steering torque and suspension movement. Anything that needs data only iRacing publishes stays inactive while a bridge is running — Trading Paints, the incident count, the spotter's car left/right calls, tire rumble, pit commands, replay control, chat commands and camera control.</p>
+<p>What a bridge provides is steering torque and suspension movement. Anything that needs data only iRacing publishes stays inactive while a bridge is running — Trading Paints, the incident count, the spotter's car left/right calls, pit commands, replay control, chat commands and camera control. Tire rumble stays inactive too, except on Automobilista 2, which reports when a tyre is on a rumble strip.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"section"} -->

@@ -2842,4 +2842,7 @@
   <data name="AccessibilityCalibrationModeOn" xml:space="preserve">
     <value>Kalibreringstilstand er slået til - dit rat sendes ikke videre.</value>
   </data>
+  <data name="Automobilista2" xml:space="preserve">
+    <value>Automobilista 2</value>
+  </data>
 </root>

@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**MAIRA** (v2.1, "Marvin's Awesome iRacing App" — the repo keeps its historical `MarvinsAIRARefactored` name) is a Windows desktop application written in **C# 13 / .NET 9** using **WPF** (Windows Presentation Foundation). It is a sim-racing companion tool for **iRacing** that provides advanced force-feedback processing, steering effects, pedal haptics, hardware integrations, and various overlays. A **game bridge** feeds telemetry from other simulators (Le Mans Ultimate, rFactor 2, the Assetto Corsa family, RaceRoom) into the same iRacing-native pipeline.
+**MAIRA** (v2.1, "Marvin's Awesome iRacing App" — the repo keeps its historical `MarvinsAIRARefactored` name) is a Windows desktop application written in **C# 13 / .NET 9** using **WPF** (Windows Presentation Foundation). It is a sim-racing companion tool for **iRacing** that provides advanced force-feedback processing, steering effects, pedal haptics, hardware integrations, and various overlays. A **game bridge** feeds telemetry from other simulators (Le Mans Ultimate, rFactor 2, the Assetto Corsa family, RaceRoom, Automobilista 2) into the same iRacing-native pipeline.
 
 The project has a second build target called **AdminBoxx**, controlled via the `ADMINBOXX` preprocessor constant. When `ADMINBOXX` is defined, many features are disabled and the app runs as a simpler hardware-controller utility.
 
@@ -156,7 +156,7 @@ All paths are relative to the nested project folder `MarvinsAIRARefactored/` (se
 | Force feedback / wheel | `RacingWheel.cs`, `SteeringEffects.cs`, `DirectInput.cs`, `Drivers.cs` |
 | Pedals & haptics | `Pedals.cs`, `GTensioner.cs`, `GTensionerGraph.cs` |
 | iRacing data | `Telemetry.cs`, `Simulator.cs` |
-| Game bridge | `GameBridge.cs` (adapters for other sims live in `GameBridges/` — LMU, rFactor 2, AC / ACC / AC EVO / AC Rally, RaceRoom) |
+| Game bridge | `GameBridge.cs` (adapters for other sims live in `GameBridges/` — LMU, rFactor 2, AC / ACC / AC EVO / AC Rally, RaceRoom, Automobilista 2) |
 | Audio | `AudioManager.cs`, `Sounds.cs`, `LFE.cs` |
 | Speech / commentary | `SpeechToText.cs`, `TextToSpeech.cs`, `Commentary.cs`, `ChatQueue.cs` |
 | Hardware integrations | `TyphoonWind.cs`, `AdminBoxx.cs`, `StreamDeck.cs`, `VirtualJoystick.cs`, `HidHotPlugMonitor.cs`, `LogitechWheel.cs` |

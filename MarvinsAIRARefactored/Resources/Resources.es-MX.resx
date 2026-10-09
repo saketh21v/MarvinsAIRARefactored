@@ -2842,4 +2842,7 @@
   <data name="AccessibilityCalibrationModeOn" xml:space="preserve">
     <value>El modo de calibración está activado - tu volante no se transmite.</value>
   </data>
+  <data name="Automobilista2" xml:space="preserve">
+    <value>Automobilista 2</value>
+  </data>
 </root>

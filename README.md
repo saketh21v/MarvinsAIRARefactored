@@ -13,7 +13,7 @@
 - **Pedal haptics** — Simagic HPR and other haptic pedal support driven by live telemetry (ABS, wheel lock, wheel spin, etc.).
 - **G Tensioner** — seat-belt tensioner support, including SimHub-style DIY belt tensioner hardware.
 - **Typhoon Wind** — wind simulator hardware control.
-- **Game bridge** — feeds telemetry from other simulators into MAIRA's iRacing-native pipeline, so force feedback and effects work outside of iRacing. Currently supports Le Mans Ultimate, rFactor 2, Assetto Corsa, Assetto Corsa Competizione, Assetto Corsa EVO, Assetto Corsa Rally, and RaceRoom, with optional vJoy steering passthrough.
+- **Game bridge** — feeds telemetry from other simulators into MAIRA's iRacing-native pipeline, so force feedback and effects work outside of iRacing. Currently supports Le Mans Ultimate, rFactor 2, Assetto Corsa, Assetto Corsa Competizione, Assetto Corsa EVO, Assetto Corsa Rally, RaceRoom, and Automobilista 2, with optional vJoy steering passthrough.
 - **Audio** — sound effects and warnings, low-frequency effects (LFE), and per-device audio output management (FMOD).
 - **AI commentary & speech** — text-to-speech race commentary (including ElevenLabs voices), speech-to-text for in-sim chat, and a chat queue.
 - **Hardware integrations** — Elgato Stream Deck, vJoy virtual joystick, AdminBoxx controller, and HID hot-plug monitoring.
@@ -58,7 +58,7 @@ Inside the main project:
 | Folder | Contents |
 |---|---|
 | `Components/` | Runtime services (force feedback, telemetry, audio, hardware integrations, cloud, etc.) — the engine room |
-| `GameBridges/` | Per-simulator telemetry bridge adapters (LMU, rFactor 2, AC family, RaceRoom) |
+| `GameBridges/` | Per-simulator telemetry bridge adapters (LMU, rFactor 2, AC family, RaceRoom, Automobilista 2) |
 | `DataContext/` | Settings, per-context settings, localization, and the root WPF binding object |
 | `Pages/` | Feature UI pages hosted in the main window (one page per feature area) |
 | `Windows/` | Top-level windows, dialogs, wizards, and overlay windows |

@@ -2845,4 +2845,7 @@
   <data name="AccessibilityCalibrationModeOn" xml:space="preserve">
     <value>キャリブレーションモードがオンです。ホイールの入力は渡されていません。</value>
   </data>
+  <data name="Automobilista2" xml:space="preserve">
+    <value>Automobilista 2</value>
+  </data>
 </root>

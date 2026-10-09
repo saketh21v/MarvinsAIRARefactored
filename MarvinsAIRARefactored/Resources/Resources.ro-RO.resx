@@ -2842,4 +2842,7 @@
   <data name="AccessibilityCalibrationModeOn" xml:space="preserve">
     <value>Modul de calibrare este pornit - volanul tău nu este transmis.</value>
   </data>
+  <data name="Automobilista2" xml:space="preserve">
+    <value>Automobilista 2</value>
+  </data>
 </root>
